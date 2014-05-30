@@ -1,5 +1,12 @@
-{"run_list":[
-  "recipe[rbenv::default]",
-  "recipe[rbenv::ruby_build]"
+{
+  "nginx" : {
+    "port" : 80
+  },
+  "run_list":[
+    "appusers",
+    "common_apps",
+    "nginx",
+    "rbenv-ruby::default",
+    "rbenv-ruby::install"
 ]}
 
